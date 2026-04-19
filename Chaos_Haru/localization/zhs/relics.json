@@ -1,9 +1,9 @@
 {
-    "CHAOS_HARU-HARU_RELIC.title": "初始遗物",
-    "CHAOS_HARU-HARU_RELIC.description": "每回合开始时，抽[blue]{Cards}[/blue]张牌。",
-    "CHAOS_HARU-HARU_RELIC.flavor": "初始遗物的描述。",
-
-    "CHAOS_HARU-HARU2_RELIC.title": "初始遗物+++",
-    "CHAOS_HARU-HARU2_RELIC.description": "每回合开始时，抽[blue]{Cards}[/blue]张牌。",
-    "CHAOS_HARU-HARU2_RELIC.flavor": "初始遗物+++的描述。"
+    "CHAOS_HARU_RELIC_HARU_RELIC.title":  "初始遗物",
+    "CHAOS_HARU_RELIC_HARU_RELIC.description":  "每回合开始时，抽[blue]{Cards}[/blue]张牌。",
+    "CHAOS_HARU_RELIC_HARU_RELIC.flavor":  "初始遗物的描述。",
+    
+    "CHAOS_HARU_RELIC_HARU2_RELIC.title":  "初始遗物+++",
+    "CHAOS_HARU_RELIC_HARU2_RELIC.description":  "每回合开始时，抽[blue]{Cards}[/blue]张牌。",
+    "CHAOS_HARU_RELIC_HARU2_RELIC.flavor":  "初始遗物+++的描述。"
 }

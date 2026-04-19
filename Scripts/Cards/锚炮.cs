@@ -1,5 +1,4 @@
-using BaseLib.Abstracts;
-using BaseLib.Utils;
+using BaseLibToRitsu.Generated;
 using Chaos_Haru.Scripts.CardPools;
 using MegaCrit.Sts2.Core.Commands;
 using MegaCrit.Sts2.Core.Entities.Cards;
@@ -9,12 +8,13 @@ using MegaCrit.Sts2.Core.Localization.DynamicVars;
 using MegaCrit.Sts2.Core.Models;
 using MegaCrit.Sts2.Core.Nodes.Vfx;
 using MegaCrit.Sts2.Core.ValueProps;
+using STS2RitsuLib;
 
 namespace Chaos_Haru.Scripts.Cards;
 
 // 加入哪个卡池
 [Pool(typeof(Chaos_HaruCardPool))]
-public class MaopaoCard : CustomCardModel, ITranscendenceCard
+public class MaopaoCard : CustomCardModel
 {
 	private const string _increaseKey = "Increase";
 
@@ -88,9 +88,6 @@ public class MaopaoCard : CustomCardModel, ITranscendenceCard
 		base.DynamicVars.Damage.BaseValue += extraDamage;
 		ExtraDamageFromMaopaoPlays += extraDamage;
 	}
-
-	// 古老牙齿可以把一张初始卡变成先古升级。
-	public CardModel GetTranscendenceTransformedCard() => ModelDb.Card<Maopao2Card>();
 	
     // 卡面路径
     public override string PortraitPath => $"res://Chaos_Haru/images/cards/{nameof(MaopaoCard)}.png";

@@ -1,5 +1,4 @@
-using BaseLib.Abstracts;
-using BaseLib.Utils;
+using BaseLibToRitsu.Generated;
 using Chaos_Haru.Scripts.CardPools;
 using MegaCrit.Sts2.Core.Commands;
 using MegaCrit.Sts2.Core.Entities.Cards;
@@ -92,3 +91,6 @@ public class Maopao2Card : CustomCardModel
     public override string PortraitPath => $"res://Chaos_Haru/images/cards/{nameof(Maopao2Card)}.png";
 
 }
+
+
+

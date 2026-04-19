@@ -1,5 +1,4 @@
-using BaseLib.Abstracts;
-using BaseLib.Utils;
+using BaseLibToRitsu.Generated;
 using Chaos_Haru.Scripts.PotionPools;
 using MegaCrit.Sts2.Core.Entities.Cards;
 using MegaCrit.Sts2.Core.Entities.Creatures;
@@ -8,6 +7,7 @@ using MegaCrit.Sts2.Core.GameActions.Multiplayer;
 using MegaCrit.Sts2.Core.HoverTips;
 using MegaCrit.Sts2.Core.Localization.DynamicVars;
 using MegaCrit.Sts2.Core.Models.Cards;
+using STS2RitsuLib;
 
 namespace Chaos_Haru.Scripts;
 

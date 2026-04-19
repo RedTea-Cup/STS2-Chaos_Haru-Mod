@@ -1,32 +1,17 @@
 {
-
-  "CHAOS_HARU-CHAOS_HARU_CHARACTER.aromaPrinciple": "[sine][blue]……等待……[/blue][/sine]",
-
-  "CHAOS_HARU-CHAOS_HARU_CHARACTER.banter.alive.endTurnPing": "……",
-
-  "CHAOS_HARU-CHAOS_HARU_CHARACTER.banter.dead.endTurnPing": "……",
-
-  "CHAOS_HARU-CHAOS_HARU_CHARACTER.cardsModifierDescription": "戈多的卡牌现在会出现在奖励和商店中。",
-
-  "CHAOS_HARU-CHAOS_HARU_CHARACTER.cardsModifierTitle": "戈多卡牌",
-
-  "CHAOS_HARU-CHAOS_HARU_CHARACTER.description": "一个在无尽等待中的存在。\n时间对[gold]戈多[/gold]而言，不过是另一种形式的永恒。",
-
-  "CHAOS_HARU-CHAOS_HARU_CHARACTER.eventDeathPrevention": "我还得继续等下去……",
-
-  "CHAOS_HARU-CHAOS_HARU_CHARACTER.goldMonologue": "[sine]这些金币……也许能派上用场……[/sine]",
-
-  "CHAOS_HARU-CHAOS_HARU_CHARACTER.possessiveAdjective": "他的",
-
-  "CHAOS_HARU-CHAOS_HARU_CHARACTER.pronounObject": "他",
-
-  "CHAOS_HARU-CHAOS_HARU_CHARACTER.pronounPossessive": "他的",
-
-  "CHAOS_HARU-CHAOS_HARU_CHARACTER.pronounSubject": "他",
-
-  "CHAOS_HARU-CHAOS_HARU_CHARACTER.title": "戈多",
-
-  "CHAOS_HARU-CHAOS_HARU_CHARACTER.titleObject": "戈多",
-
-  "CHAOS_HARU-CHAOS_HARU_CHARACTER.unlockText": "用[pink]{Prerequisite}[/pink]进行一局游戏来解锁这个角色。"
+    "CHAOS_HARU_CHARACTER_CHAOS_HARU_CHARACTER.aromaPrinciple":  "[sine][blue]……等待……[/blue][/sine]",
+    "CHAOS_HARU_CHARACTER_CHAOS_HARU_CHARACTER.banter.alive.endTurnPing":  "……",
+    "CHAOS_HARU_CHARACTER_CHAOS_HARU_CHARACTER.banter.dead.endTurnPing":  "……",
+    "CHAOS_HARU_CHARACTER_CHAOS_HARU_CHARACTER.cardsModifierDescription":  "小春的卡牌现在会出现在奖励和商店中。",
+    "CHAOS_HARU_CHARACTER_CHAOS_HARU_CHARACTER.cardsModifierTitle":  "小春卡牌",
+    "CHAOS_HARU_CHARACTER_CHAOS_HARU_CHARACTER.description":  "担任风纪委员的大胃王学生。\n有一点近视，因此即便是恐怖的东西出现，也会因为看不清而笑眯眯地面对。",
+    "CHAOS_HARU_CHARACTER_CHAOS_HARU_CHARACTER.eventDeathPrevention":  "我还得继续等下去……",
+    "CHAOS_HARU_CHARACTER_CHAOS_HARU_CHARACTER.goldMonologue":  "[sine]这些金币……也许能派上用场……[/sine]",
+    "CHAOS_HARU_CHARACTER_CHAOS_HARU_CHARACTER.possessiveAdjective":  "她的",
+    "CHAOS_HARU_CHARACTER_CHAOS_HARU_CHARACTER.pronounObject":  "她",
+    "CHAOS_HARU_CHARACTER_CHAOS_HARU_CHARACTER.pronounPossessive":  "她的",
+    "CHAOS_HARU_CHARACTER_CHAOS_HARU_CHARACTER.pronounSubject":  "她",
+    "CHAOS_HARU_CHARACTER_CHAOS_HARU_CHARACTER.title":  "小春",
+    "CHAOS_HARU_CHARACTER_CHAOS_HARU_CHARACTER.titleObject":  "小春",
+    "CHAOS_HARU_CHARACTER_CHAOS_HARU_CHARACTER.unlockText":  "用[pink]{Prerequisite}[/pink]进行一局游戏来解锁这个角色。"
 }

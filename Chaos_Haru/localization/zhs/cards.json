@@ -1,28 +1,42 @@
 {
-    "CHAOS_HARU-STRIKE_CARD.title": "打击",
-    "CHAOS_HARU-STRIKE_CARD.description": "造成{Damage:diff()}点伤害。",
-
-    "CHAOS_HARU-DEFEND_CARD.title": "防御",
-    "CHAOS_HARU-DEFEND_CARD.description": "获得{Block:diff()}点格挡。",
-
-    "CHAOS_HARU-MAOPAO_CARD.title": "锚炮",
-    "CHAOS_HARU-MAOPAO_CARD.description": "造成{Damage:diff()}点伤害。\n本场战斗中锚炮的伤害增加{Increase:diff()}点。",
-
-    "CHAOS_HARU-MAODIAN_CARD.title": "锚点",
-    "CHAOS_HARU-MAODIAN_CARD.description": "{IfUpgraded:show:获得1{Energy:energyIcons()}。\n}将抽牌堆或弃牌堆中的[gold]锚炮[/gold]移动至手牌。",
-
-    "CHAOS_HARU-MAOPAO2_CARD.title": "神·锚炮",
-    "CHAOS_HARU-MAOPAO2_CARD.description": "造成{Damage:diff()}点伤害。\n本场战斗中锚炮的伤害增加{Increase:diff()}点。",
-
-    "CHAOS_HARU-FENSUIDAJI_CARD.title": "粉碎之锚",
-    "CHAOS_HARU-FENSUIDAJI_CARD.description": "造成{CalculatedDamage:diff()}点伤害。",
-
-    "CHAOS_HARU-XUANFENGMAO_CARD.title": "旋风锚",
-    "CHAOS_HARU-XUANFENGMAO_CARD.description": "对所有敌人造成{Damage:diff()}点伤害。\n抽{Cards:diff()}张牌。",
-    
-    "CHAOS_HARU-FENGLIYIJI_CARD.title": "奋力一击",
-    "CHAOS_HARU-FENGLIYIJI_CARD.description": "造成{CalculatedDamage:diff()}点伤害。\n自身每层正面增益使伤害增加{ExtraDamage:diff()}点。",
-
-    "CHAOS_HARU-ZHENGYIXINTIAO_CARD.title": "正义信条",
-    "CHAOS_HARU-ZHENGYIXINTIAO_CARD.description": "获得1层[gold]正义[/gold]。"
+    "CHAOS_HARU_CARD_STRIKE_CARD.title":  "打击",
+    "CHAOS_HARU_CARD_STRIKE_CARD.description":  "造成{Damage:diff()}点伤害。",
+    "CHAOS_HARU_CARD_DEFEND_CARD.title":  "防御",
+    "CHAOS_HARU_CARD_DEFEND_CARD.description":  "获得{Block:diff()}点[gold]格挡[/gold]。",
+    "CHAOS_HARU_CARD_MAOPAO_CARD.title":  "锚炮",
+    "CHAOS_HARU_CARD_MAOPAO_CARD.description":  "造成{Damage:diff()}点伤害。\n本场战斗中锚炮的伤害增加{Increase:diff()}点。",
+    "CHAOS_HARU_CARD_MAODIAN_CARD.title":  "锚点",
+    "CHAOS_HARU_CARD_MAODIAN_CARD.description":  "{IfUpgraded:show:获得{Energy:energyIcons()}。\n}将[gold]抽牌堆[/gold]或[gold]弃牌堆[/gold]中的[gold]锚炮[/gold]移动至手牌。",
+    "CHAOS_HARU_CARD_MAOPAO2_CARD.title":  "神·锚炮",
+    "CHAOS_HARU_CARD_MAOPAO2_CARD.description":  "造成{Damage:diff()}点伤害。\n本场战斗中锚炮的伤害增加{Increase:diff()}点。",
+    "CHAOS_HARU_CARD_FENSUIDAJI_CARD.title":  "粉碎之锚",
+    "CHAOS_HARU_CARD_FENSUIDAJI_CARD.description":  "[gold]粉碎[/gold]。\n造成{Damage:diff()}点伤害。",
+    "CHAOS_HARU_CARD_XUANFENGMAO_CARD.title":  "旋风锚",
+    "CHAOS_HARU_CARD_XUANFENGMAO_CARD.description":  "对所有敌人造成{Damage:diff()}点伤害。\n抽{Cards:diff()}张牌。",
+    "CHAOS_HARU_CARD_FENGLIYIJI_CARD.title":  "奋力一击",
+    "CHAOS_HARU_CARD_FENGLIYIJI_CARD.description":  "造成{CalculatedDamage:diff()}点伤害。\n自身每层正面增益使伤害增加{ExtraDamage:diff()}点。",
+    "CHAOS_HARU_CARD_ZHENGYIXINTIAO_CARD.title":  "正义信条",
+    "CHAOS_HARU_CARD_ZHENGYIXINTIAO_CARD.description":  "获得1层[gold]正义[/gold]。",
+    "CHAOS_HARU_CARD_NENGLIANGYONGDONG_CARD.title":  "能量涌动",
+    "CHAOS_HARU_CARD_NENGLIANGYONGDONG_CARD.description":  "获得{Energy:energyIcons()}。\n下个回合获得{energyPrefix:energyIcons(1)}。",
+    "CHAOS_HARU_CARD_XIESHANG_CARD.title":  "协商",
+    "CHAOS_HARU_CARD_XIESHANG_CARD.description":  "获得{Block:diff()}点[gold]格挡[/gold]。\n所有敌人获得{EnemyBlock:diff()}点[gold]格挡[/gold]。",
+    "CHAOS_HARU_CARD_CHONGDIAN_CARD.title":  "充电",
+    "CHAOS_HARU_CARD_CHONGDIAN_CARD.description":  "根据当前手牌中的攻击牌数量，获得等量的[gold]充电[/gold]。",
+    "CHAOS_HARU_CARD_MAOLIANQIANYING_CARD.title":  "锚链牵引",
+    "CHAOS_HARU_CARD_MAOLIANQIANYING_CARD.description":  "将[gold]抽牌堆[/gold]或[gold]弃牌堆[/gold]中的[gold]锚炮[/gold]移动至手牌。\n本卡牌耗能增加1{energyPrefix:energyIcons(1)}。",
+    "CHAOS_HARU_CARD_HAOZHAN_CARD.title":  "好战",
+    "CHAOS_HARU_CARD_HAOZHAN_CARD.description":  "若手牌中没有攻击牌，则抽{Cards}张牌。",
+    "CHAOS_HARU_CARD_ANHEIZHISHI_CARD.title":  "暗黑知识",
+    "CHAOS_HARU_CARD_ANHEIZHISHI_CARD.description":  "抽{Cards}张牌并将其打出。\n结束你的回合。",
+    "CHAOS_HARU_CARD_ZHANSHUSHEJI_CARD.title":  "战术射击",
+    "CHAOS_HARU_CARD_ZHANSHUSHEJI_CARD.description":  "对所有敌人造成{Damage:diff()}点伤害。",
+    "CHAOS_HARU_CARD_YUANZIWAJIE_CARD.title":  "原子瓦解",
+    "CHAOS_HARU_CARD_YUANZIWAJIE_CARD.description":  "[gold]粉碎[/gold]。\n对所有敌人造成{Damage:diff()}点伤害。",
+    "CHAOS_HARU_CARD_JIJIEHONGMANG_CARD.title":  "寂界虹芒",
+    "CHAOS_HARU_CARD_JIJIEHONGMANG_CARD.description":  "获得{IfUpgraded:show:X|X-1}层[gold]无实体[/gold]。",
+    "CHAOS_HARU_CARD_HUYOU_CARD.title":  "护佑",
+    "CHAOS_HARU_CARD_HUYOU_CARD.description":  "获得{Block:diff()}点[gold]格挡[/gold]。\n若你没有格挡，则获得双倍。",
+    "CHAOS_HARU_CARD_JIJIE_CARD.title":  "集结",
+    "CHAOS_HARU_CARD_JIJIE_CARD.description":  "抽{Cards:diff()}张牌，失去1点[gold]敏捷[/gold]。"
 }

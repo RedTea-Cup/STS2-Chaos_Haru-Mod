@@ -1,11 +1,12 @@
-using BaseLib.Abstracts;
-using BaseLib.Utils;
+using BaseLibToRitsu.Generated;
 using Chaos_Haru.Scripts.CardPools;
 using Chaos_Haru.Scripts.Powers;
 using MegaCrit.Sts2.Core.Commands;
 using MegaCrit.Sts2.Core.Entities.Cards;
 using MegaCrit.Sts2.Core.GameActions.Multiplayer;
+using MegaCrit.Sts2.Core.HoverTips;
 using MegaCrit.Sts2.Core.Localization.DynamicVars;
+using MegaCrit.Sts2.Core.Models.Powers;
 
 namespace Chaos_Haru.Scripts.Cards;
 
@@ -14,7 +15,7 @@ namespace Chaos_Haru.Scripts.Cards;
 public class ZhengyixintiaoCard : CustomCardModel
 {
     // 基础耗能
-    private const int energyCost = 3;
+    private const int energyCost = 2;
     // 卡牌类型
     private const CardType type = CardType.Skill;
     // 卡牌稀有度
@@ -28,6 +29,7 @@ public class ZhengyixintiaoCard : CustomCardModel
     {
     }
 
+    // 卡牌的关键词
     public override IEnumerable<CardKeyword> CanonicalKeywords => [CardKeyword.Ethereal];
 
     // 卡牌的基础属性
@@ -47,6 +49,12 @@ public class ZhengyixintiaoCard : CustomCardModel
     {
         RemoveKeyword(CardKeyword.Ethereal);
     }
+
+    // 卡牌旁出现的提示方框，或预览卡牌。
+    protected override IEnumerable<IHoverTip> ExtraHoverTips => [
+        HoverTipFactory.FromPower<ZhengyiPower>(),
+        HoverTipFactory.FromPower<StrengthPower>()
+    ];
 
     // 卡面路径
     public override string PortraitPath => $"res://Chaos_Haru/images/cards/{nameof(ZhengyixintiaoCard)}.png";

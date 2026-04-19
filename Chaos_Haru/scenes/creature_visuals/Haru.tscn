@@ -1,0 +1,32 @@
+[gd_scene load_steps=2 format=3 uid="uid://ghc6k5fm5ewn"]
+
+[ext_resource type="Texture2D" uid="uid://jg646c2o0r0v" path="res://Chaos_Haru/images/characters/Q_Haru.png" id="1_3vn36"]
+
+[node name="Haru" type="Node2D"]
+
+[node name="Visuals" type="Sprite2D" parent="."]
+unique_name_in_owner = true
+position = Vector2(0, -158)
+scale = Vector2(0.41188148, 0.41188145)
+texture = ExtResource("1_3vn36")
+
+[node name="Bounds" type="Control" parent="."]
+unique_name_in_owner = true
+layout_mode = 3
+anchors_preset = 0
+offset_left = -168.0
+offset_top = -339.0
+offset_right = 167.0
+offset_bottom = -6.0
+
+[node name="IntentPos" type="Marker2D" parent="."]
+unique_name_in_owner = true
+position = Vector2(-40, -332)
+
+[node name="CenterPos" type="Marker2D" parent="."]
+unique_name_in_owner = true
+position = Vector2(-18, -183)
+
+[node name="TalkPos" type="Marker2D" parent="."]
+unique_name_in_owner = true
+position = Vector2(63, -342)

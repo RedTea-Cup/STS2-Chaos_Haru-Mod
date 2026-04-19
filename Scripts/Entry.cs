@@ -1,7 +1,10 @@
+using Chaos_Haru.Scripts.Cards;
+using Chaos_Haru.Scripts.Relics;
 using Godot.Bridge;
 using HarmonyLib;
 using MegaCrit.Sts2.Core.Logging;
 using MegaCrit.Sts2.Core.Modding;
+using STS2RitsuLib;
 
 namespace Chaos_Haru.Scripts;
 
@@ -18,6 +21,14 @@ public class Entry
         harmony.PatchAll();
         // 使得tscn可以加载自定义脚本
         ScriptManagerBridge.LookupScriptsInAssembly(typeof(Entry).Assembly);
+
+        // RitsuLib 下需要显式注册先古牙齿/奥罗巴斯之触的映射关系
+        RitsuLibFramework.RegisterArchaicToothTranscendenceMapping<MaopaoCard, Maopao2Card>();
+        RitsuLibFramework.RegisterTouchOfOrobasRefinementMapping<HaruRelic, Haru2Relic>();
+
         Log.Info("Mod initialized!");
     }
 }
+
+
+

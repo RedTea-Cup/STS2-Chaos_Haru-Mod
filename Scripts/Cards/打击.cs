@@ -1,5 +1,4 @@
-using BaseLib.Abstracts;
-using BaseLib.Utils;
+using BaseLibToRitsu.Generated;
 using Chaos_Haru.Scripts.CardPools;
 using MegaCrit.Sts2.Core.Commands;
 using MegaCrit.Sts2.Core.Entities.Cards;

@@ -1,5 +1,4 @@
-using BaseLib.Abstracts;
-using BaseLib.Utils;
+using BaseLibToRitsu.Generated;
 using Chaos_Haru.Scripts.CardPools;
 using MegaCrit.Sts2.Core.Commands;
 using MegaCrit.Sts2.Core.Entities.Cards;
@@ -41,29 +40,21 @@ public class MaodianCard : CustomCardModel
         await PlayerCmd.GainEnergy(base.DynamicVars.Energy.IntValue, base.Owner);
 
         // 从抽牌堆和弃牌堆中搜索锚炮卡牌
-        var drawPileCards = PileType.Draw.GetPile(base.Owner).Cards.OfType<MaopaoCard>().ToList();
-        var discardPileCards = PileType.Discard.GetPile(base.Owner).Cards.OfType<MaopaoCard>().ToList();
-        // 从抽牌堆和弃牌堆中搜索神·锚炮卡牌
-        var drawPile2Cards = PileType.Draw.GetPile(base.Owner).Cards.OfType<Maopao2Card>().ToList();
-        var discardPile2Cards = PileType.Discard.GetPile(base.Owner).Cards.OfType<Maopao2Card>().ToList();
+        var drawPileCards = PileType.Draw.GetPile(base.Owner).Cards
+            .Where(card => card is MaopaoCard or Maopao2Card)
+            .ToList();
 
-        // 合并两个堆中的结果
-        var allMaopaoCards = drawPileCards.Concat(discardPileCards).ToList();
-        var allMaopao2Cards = drawPile2Cards.Concat(discardPile2Cards).ToList();
+        var discardPileCards = PileType.Discard.GetPile(base.Owner).Cards
+            .Where(card => card is MaopaoCard or Maopao2Card)
+            .ToList();
 
-        if (allMaopaoCards.Count > 0)
+        var targetCard = drawPileCards.Concat(discardPileCards).FirstOrDefault();
+        if (targetCard != null)
         {
-            // 将第一张锚炮移至手牌
-            MaopaoCard targetCard = allMaopaoCards[0];
             await CardPileCmd.Add(targetCard, PileType.Hand);
         }
 
-        if (allMaopao2Cards.Count > 0)
-        {
-            // 将第一张神·锚炮移至手牌
-            Maopao2Card targetCard = allMaopao2Cards[0];
-            await CardPileCmd.Add(targetCard, PileType.Hand);
-        }
+        base.EnergyCost.AddThisCombat(1);
     }
 
     // 升级后的效果逻辑

@@ -1,4 +1,4 @@
-using BaseLib.Abstracts;
+using BaseLibToRitsu.Generated;
 using Chaos_Haru.Scripts.CardPools;
 using Chaos_Haru.Scripts.Cards;
 using Chaos_Haru.Scripts.PotionPools;
@@ -6,6 +6,7 @@ using Chaos_Haru.Scripts.RelicPools;
 using Chaos_Haru.Scripts.Relics;
 using Godot;
 using MegaCrit.Sts2.Core.Entities.Characters;
+using MegaCrit.Sts2.Core.Helpers;
 using MegaCrit.Sts2.Core.Models;
 
 namespace Chaos_Haru.Scripts.Characters;
@@ -17,19 +18,28 @@ public class Chaos_HaruCharacter : PlaceholderCharacterModel
     public override Color EnergyLabelOutlineColor => new(0.1f, 0.1f, 1f);
 
     // 人物性别（男女中立）
-    public override CharacterGender Gender => CharacterGender.Masculine;
+    public override CharacterGender Gender => CharacterGender.Feminine;
 
     // 初始血量
     public override int StartingHp => 80;
 
-    // 人物模型tscn路径。要自定义见下。
-    //public override string CustomVisualPath => "res://test/scenes/test_character.tscn";
+    // 人物模型tscn路径。
+    public override string CustomVisualPath => "res://Chaos_Haru/scenes/creature_visuals/Haru.tscn";
+
+    // TODO 拖尾逻辑暂时没有patch后的直接赋值的方法，所以先用原版机器人的（反正都是蓝色系
+    public override string? CustomTrailPath => SceneHelper.GetScenePath("vfx/card_trail_defect");
     // 卡牌拖尾场景。
     // public override string CustomTrailPath => "res://scenes/vfx/card_trail_ironclad.tscn";
+
     // 人物头像路径。
-    public override string CustomIconTexturePath => "res://icon.svg";
+    public override string CustomIconTexturePath => "res://haru_icon.png";
     // 人物头像2号。
-    // public override string CustomIconPath => "res://scenes/ui/character_icons/ironclad_icon.tscn";
+    public override string CustomIconPath => "res://Chaos_Haru/scenes/ui/character_icons/haru_icon.tscn";
+
+    public static readonly Color DefaultColor = new Color("7A7AFF");
+    // 地图上该角色绘制连线时使用的颜色
+    public override Color MapDrawingColor => DefaultColor;
+
     // 能量表盘tscn路径。要自定义见下。
     // public override string CustomEnergyCounterPath => "res://test/scenes/test_energy_counter.tscn";
     // 篝火休息场景。
@@ -46,15 +56,18 @@ public class Chaos_HaruCharacter : PlaceholderCharacterModel
     // public override string CustomArmScissorsTexturePath => null;
 
     // 人物选择背景。
-    // public override string CustomCharacterSelectBg => "res://test/scenes/test_bg.tscn";
+    public override string CustomCharacterSelectBg => "res://Chaos_Haru/scenes/beijing/beijing.tscn";
+
     // 人物选择图标。
-    // public override string CustomCharacterSelectIconPath => "res://test/images/char_select_test.png";
+    public override string CustomCharacterSelectIconPath => "res://Chaos_Haru/images/charui/char_select_haru.png";
+
     // 人物选择图标-锁定状态。
-    // public override string CustomCharacterSelectLockedIconPath => "res://test/images/char_select_test_locked.png";
+    public override string CustomCharacterSelectLockedIconPath => "res://Chaos_Haru/images/charui/char_select_haru_locked.png";
     // 人物选择过渡动画。
     // public override string CustomCharacterSelectTransitionPath => "res://materials/transitions/ironclad_transition_mat.tres";
+    
     // 地图上的角色标记图标、表情轮盘上的角色头像
-    // public override string CustomMapMarkerPath => null;
+    public override string CustomMapMarkerPath => "res://Chaos_Haru/images/packed/map/icons/map_marker_haru.png";
     // 攻击音效
     // public override string CustomAttackSfx => null;
     // 施法音效

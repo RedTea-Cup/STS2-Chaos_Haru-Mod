@@ -1,5 +1,4 @@
-using BaseLib.Abstracts;
-using BaseLib.Utils;
+using BaseLibToRitsu.Generated;
 using Chaos_Haru.Scripts.CardPools;
 using MegaCrit.Sts2.Core.Commands;
 using MegaCrit.Sts2.Core.Entities.Cards;
@@ -17,7 +16,7 @@ namespace Chaos_Haru.Scripts.Cards;
 public class FengliyijiCard : CustomCardModel
 {
     // 基础耗能
-    private const int energyCost = 3;
+    private const int energyCost = 6;
     // 卡牌类型
     private const CardType type = CardType.Attack;
     // 卡牌稀有度

@@ -1,5 +1,4 @@
-using BaseLib.Abstracts;
-using BaseLib.Utils;
+using BaseLibToRitsu.Generated;
 using Chaos_Haru.Scripts.CardPools;
 using Chaos_Haru.Scripts.Keywords;
 using MegaCrit.Sts2.Core.Commands;
@@ -28,14 +27,10 @@ public class FensuidajiCard : CustomCardModel
     private const bool shouldShowInCardLibrary = true;
 
     // 卡牌的基础属性
-    protected override IEnumerable<DynamicVar> CanonicalVars => new DynamicVar[]
-    {
-        new CalculationBaseVar(10m),  // 基础伤害10点
-        new ExtraDamageVar(10m),  // 额外伤害10点
-        new CalculatedDamageVar(ValueProp.Move)
-            .WithMultiplier((CardModel _, Creature? target) =>
-                target?.Block >= 1 ? 1 : 0)  // 有格挡时乘以1（加上额外伤害），无格挡时乘以0（只有基础伤害）
-    };
+    protected override IEnumerable<DynamicVar> CanonicalVars =>
+    [
+        new DamageVar(8, ValueProp.Move)
+    ];
 
     public FensuidajiCard() : base(energyCost, type, rarity, targetType, shouldShowInCardLibrary)
     {
@@ -47,16 +42,28 @@ public class FensuidajiCard : CustomCardModel
     // 打出时的效果逻辑
     protected override async Task OnPlay(PlayerChoiceContext choiceContext, CardPlay cardPlay)
     {
-        ArgumentNullException.ThrowIfNull(cardPlay.Target, "cardPlay.Target");
-        await DamageCmd.Attack(base.DynamicVars.CalculatedDamage)
+        ArgumentNullException.ThrowIfNull(cardPlay.Target, nameof(cardPlay.Target));
+
+        await DamageCmd.Attack(base.DynamicVars.Damage.BaseValue)
             .FromCard(this)
             .Targeting(cardPlay.Target)
             .Execute(choiceContext);
     }
 
+    public override decimal ModifyDamageMultiplicative(Creature? target, decimal amount, ValueProp props, Creature? dealer, CardModel? cardSource)
+    {
+        if (cardSource != this)
+        {
+            return 1m;
+        }
+
+        return FensuiKeywords.GetDamageMultiplier(target, props, cardSource);
+    }
+
     // 升级后的效果逻辑
     protected override void OnUpgrade()
     {
+        DynamicVars.Damage.UpgradeValueBy(2); 
         AddKeyword(CardKeyword.Retain);
     }
 

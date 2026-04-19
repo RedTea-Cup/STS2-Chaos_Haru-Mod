@@ -1,5 +1,4 @@
-using BaseLib.Abstracts;
-using BaseLib.Utils;
+using BaseLibToRitsu.Generated;
 using Chaos_Haru.Scripts.RelicPools;
 using MegaCrit.Sts2.Core.Commands;
 using MegaCrit.Sts2.Core.Entities.Players;
@@ -30,10 +29,12 @@ public class Haru2Relic : CustomRelicModel
 
     public override async Task AfterPlayerTurnStart(PlayerChoiceContext choiceContext, Player player)
     {
-        // 这里的DynamicVars.Cards.IntValue为上面设置的CardsVar的数值。
-        await CardPileCmd.Draw(choiceContext, DynamicVars.Cards.IntValue, player);
-    }
+        if (player != base.Owner)
+        {
+            return;
+        }
 
-    // 初始遗物的升级可以写这里
-    public override RelicModel? GetUpgradeReplacement() => ModelDb.Relic<Circlet>().ToMutable();
+        // 这里的DynamicVars.Cards.IntValue为上面设置的CardsVar的数值。
+        await CardPileCmd.Draw(choiceContext, DynamicVars.Cards.IntValue, base.Owner);
+    }
 }
