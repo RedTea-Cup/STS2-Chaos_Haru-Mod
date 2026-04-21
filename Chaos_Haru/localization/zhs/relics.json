@@ -1,9 +1,9 @@
 {
-    "CHAOS_HARU_RELIC_HARU_RELIC.title":  "初始遗物",
-    "CHAOS_HARU_RELIC_HARU_RELIC.description":  "每回合开始时，抽[blue]{Cards}[/blue]张牌。",
-    "CHAOS_HARU_RELIC_HARU_RELIC.flavor":  "初始遗物的描述。",
+    "CHAOS_HARU_RELIC_HARU_RELIC.title":  "卡厄思梦境",
+    "CHAOS_HARU_RELIC_HARU_RELIC.description":  "回合开始时增加1点[gold]压力[/gold]。",
+    "CHAOS_HARU_RELIC_HARU_RELIC.flavor":  "生存与崩溃交替的无法预测之旅",
     
-    "CHAOS_HARU_RELIC_HARU2_RELIC.title":  "初始遗物+++",
-    "CHAOS_HARU_RELIC_HARU2_RELIC.description":  "每回合开始时，抽[blue]{Cards}[/blue]张牌。",
-    "CHAOS_HARU_RELIC_HARU2_RELIC.flavor":  "初始遗物+++的描述。"
+    "CHAOS_HARU_RELIC_HARU2_RELIC.title":  "卡厄思现实",
+    "CHAOS_HARU_RELIC_HARU2_RELIC.description":  "回合开始时减少1点[gold]压力[/gold]。",
+    "CHAOS_HARU_RELIC_HARU2_RELIC.flavor":  "生存与崩溃交替的无法预测之旅。"
 }

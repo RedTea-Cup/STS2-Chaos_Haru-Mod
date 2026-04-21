@@ -1,4 +1,4 @@
 {
-    "CHAOS_HARU-FENSUI.title": "粉碎",
-    "CHAOS_HARU-FENSUI.description": "若目标有[gold]格挡[/gold]，则造成的伤害翻倍"
+    "FENSUI.title": "粉碎",
+    "FENSUI.description": "若目标有[gold]格挡[/gold]，则造成的伤害翻倍"
 }

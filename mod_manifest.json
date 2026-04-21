@@ -1,0 +1,14 @@
+{
+  "id": "Chaos_Haru",
+  "pck_name": "Chaos_Haru",
+  "name": "Chaos_Haru",
+  "author": "TEACUP",
+  "description": "基于 STS2-RitsuLib 原生脚手架迁移的角色与内容包。",
+  "version": "1.0.0",
+  "has_pck": true,
+  "has_dll": true,
+  "affects_gameplay": true,
+  "dependencies": [
+    "STS2-RitsuLib"
+  ]
+}

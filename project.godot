@@ -11,16 +11,16 @@ config_version=5
 [application]
 
 config/name="Chaos_Haru"
-config/features=PackedStringArray("4.5", "C#", "Mobile")
+config/features=PackedStringArray("4.5", "C#", "Forward Plus")
 config/icon="res://icon.svg"
 
 [dotnet]
 
 project/assembly_name="Chaos_Haru"
 
-[editor]
+[editor_overrides]
 
-export/convert_text_resources_to_binary=false
+text_editor/behavior/indent/type=1
 
 [rendering]
 
