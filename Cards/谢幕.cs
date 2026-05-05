@@ -8,20 +8,20 @@ using MegaCrit.Sts2.Core.ValueProps;
 
 namespace Chaos_Haru.Cards;
 // 谢幕
-// 费用: 0
-// 效果：保留。造成1点伤害。当此牌在手牌中每经过一回合，伤害增加3点。使用后重置。
+// 费用: 1
+// 效果：保留。造成3点伤害。当此牌在手牌中，每经过一回合，伤害增加6点。使用后重置。
 // 升级：每回合额外伤害改为4点。
 [RegisterCard(typeof(ChaosHaruCardPool))]
 public sealed class XiemuCard()
-    : ChaosHaruCardTemplate(0, CardType.Attack, CardRarity.Common, TargetType.AnyEnemy, true)
+    : ChaosHaruCardTemplate(1, CardType.Attack, CardRarity.Common, TargetType.AnyEnemy, true)
 {
     private decimal _retainedBonus;
     private bool _skipNextTurnStartBonus = true;
 
     protected override IEnumerable<DynamicVar> CanonicalVars =>
     [
-        new DamageVar(1m, ValueProp.Move),
-        new DynamicVar("Increase", 3m),
+        new DamageVar(3m, ValueProp.Move),
+        new DynamicVar("Increase", 6m),
     ];
 
     public override IEnumerable<CardKeyword> CanonicalKeywords => [CardKeyword.Retain];
@@ -55,8 +55,8 @@ public sealed class XiemuCard()
         _retainedBonus += increase;
         return Task.CompletedTask;
     }
-
-    protected override void OnUpgrade() => DynamicVars["Increase"].UpgradeValueBy(1m);
+    // 升级后每回合增加的伤害从6点改为9点
+    protected override void OnUpgrade() => DynamicVars["Increase"].UpgradeValueBy(3m);
 
     private void ResetDamage()
     {

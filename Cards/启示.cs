@@ -6,12 +6,12 @@ using MegaCrit.Sts2.Core.GameActions.Multiplayer;
 namespace Chaos_Haru.Cards;
 
 // 启示
-// 费用: 2
+// 费用: 1
 // 效果：选择一张手牌，使其在本场战斗中耗能-1。
-// 升级：费用降为1。
+// 升级：费用降为0。
 [RegisterCard(typeof(ChaosHaruCardPool))]
 public sealed class QishiCard()
-    : ChaosHaruCardTemplate(2, CardType.Skill, CardRarity.Rare, TargetType.Self, true)
+    : ChaosHaruCardTemplate(1, CardType.Skill, CardRarity.Rare, TargetType.Self, true)
 {
     public override IEnumerable<CardKeyword> CanonicalKeywords => [CardKeyword.Exhaust];
 

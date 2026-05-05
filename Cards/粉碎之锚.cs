@@ -20,14 +20,14 @@ public sealed class FensuizhimaoCard()
     protected override IEnumerable<string> RegisteredKeywordIds => [FensuiRules.FensuiKeywordId];
     // 基础属性
     protected override IEnumerable<DynamicVar> CanonicalVars => [new DamageVar(10m, ValueProp.Move)];
-    
+    // 粉碎的实现
     protected override async Task OnPlay(PlayerChoiceContext choiceContext, CardPlay cardPlay)
     {
         ArgumentNullException.ThrowIfNull(cardPlay.Target);
         await DamageCmd.Attack(DynamicVars.Damage.BaseValue).FromCard(this).Targeting(cardPlay.Target)
             .Execute(choiceContext);
     }
-
+    
     public override decimal ModifyDamageMultiplicative(Creature? target, decimal amount, ValueProp props,
         Creature? dealer, CardModel? cardSource)
     {
@@ -36,7 +36,7 @@ public sealed class FensuizhimaoCard()
 
         return FensuiRules.GetDamageMultiplier(target, props, cardSource);
     }
-
+    // 升级后增加伤害并保留
     protected override void OnUpgrade()
     {
         DynamicVars.Damage.UpgradeValueBy(3m);

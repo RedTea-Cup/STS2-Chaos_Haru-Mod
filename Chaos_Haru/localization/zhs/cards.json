@@ -91,5 +91,11 @@
     "CHAOS_HARU_CARD_KOUYA_CARD.description":  "每回合第1次打出[gold]锚炮[/gold]时，将其留在[gold]手牌[/gold]。",
     "CHAOS_HARU_CARD_QISHI_CARD.title":  "启示",
     "CHAOS_HARU_CARD_QISHI_CARD.description":  "选择[gold]手牌[/gold]中的一张牌，\n使其在本场战斗中耗能减少1{energyPrefix:energyIcons(1)}。",
-    "CHAOS_HARU_CARD_QISHI_CARD.selectionScreenPrompt":  "选择一张牌"
+    "CHAOS_HARU_CARD_QISHI_CARD.selectionScreenPrompt":  "选择一张牌",
+    "CHAOS_HARU_CARD_SHANGTIANDEZHIXUN_CARD.title":  "上天的质询",
+    "CHAOS_HARU_CARD_SHANGTIANDEZHIXUN_CARD.description":  "将你所有的[gold]打击[/gold]和[gold]防御[/gold]变为[gold]{IfUpgraded:show:巨石+|巨石}[/gold]。",
+    "CHAOS_HARU_CARD_SHIJIANJIASUJIAONAN_CARD.title":  "时间加速胶囊",
+    "CHAOS_HARU_CARD_SHIJIANJIASUJIAONAN_CARD.description":  "获得{Energy:energyIcons()}。\n抽3张牌。\n获得{IfUpgraded:show:1|3}点[gold]压力[/gold]。",
+    "CHAOS_HARU_CARD_BAOLIDEHUANYU_CARD.title":  "暴力的欢愉",
+    "CHAOS_HARU_CARD_BAOLIDEHUANYU_CARD.description":  "将你的[gold]压力[/gold]转换为等量的[gold]充电[/gold]。"
 }

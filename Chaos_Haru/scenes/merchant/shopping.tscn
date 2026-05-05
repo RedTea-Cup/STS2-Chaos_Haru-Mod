@@ -1,0 +1,10 @@
+[gd_scene load_steps=2 format=3 uid="uid://bjow8oo2fgadk"]
+
+[ext_resource type="Texture2D" uid="uid://dg1n8842we8ba" path="res://Chaos_Haru/images/characters/Shop.png" id="1_4xb2r"]
+
+[node name="Shopping" type="Node2D"]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(9.536743e-07, -204.00002)
+scale = Vector2(0.457842, 0.45784205)
+texture = ExtResource("1_4xb2r")

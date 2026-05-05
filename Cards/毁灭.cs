@@ -16,7 +16,6 @@ public sealed class HuimieCard()
 {
     protected override IEnumerable<IHoverTip> AdditionalHoverTips =>
     [
-        HoverTipFactory.FromPower<HuimiePower>(),
         HoverTipFactory.FromPower<YaliPower>()
     ];
     

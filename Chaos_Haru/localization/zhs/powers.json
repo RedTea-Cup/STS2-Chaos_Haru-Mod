@@ -4,8 +4,8 @@
     "CHAOS_HARU_POWER_ZHENGYI_POWER.description":  "打出攻击牌时获得[gold]临时力量[/gold]。",
 
     "CHAOS_HARU_POWER_CHONGDIAN_POWER.title":  "充电",
-    "CHAOS_HARU_POWER_CHONGDIAN_POWER.smartDescription":  "1回合内，攻击牌伤害提高[blue]{Amount}[/blue]x[blue]10%[/blue]。",
-    "CHAOS_HARU_POWER_CHONGDIAN_POWER.description":  "1回合内，攻击牌伤害提高[blue]10%[/blue]。",
+    "CHAOS_HARU_POWER_CHONGDIAN_POWER.smartDescription":  "1回合内，攻击牌伤害提高[blue]{Percent}%[/blue]。",
+    "CHAOS_HARU_POWER_CHONGDIAN_POWER.description":  "1回合内，攻击牌伤害提高[blue]20%[/blue]。",
 
     "CHAOS_HARU_POWER_JUEWU_POWER.title":  "觉悟",
     "CHAOS_HARU_POWER_JUEWU_POWER.smartDescription":  "当你获得[gold]力量[/gold]时，获得等量的[gold]格挡[/gold]。",

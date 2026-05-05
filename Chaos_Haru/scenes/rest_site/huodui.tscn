@@ -1,0 +1,44 @@
+[gd_scene load_steps=2 format=3 uid="uid://kaq7mt28t416"]
+
+[ext_resource type="Texture2D" uid="uid://dm2kgn358vcl1" path="res://Chaos_Haru/images/characters/HP_Haru.png" id="1_pit2x"]
+
+[node name="Huodui" type="Node2D"]
+
+[node name="SpineSprite" type="Sprite2D" parent="."]
+position = Vector2(176, 0)
+scale = Vector2(0.86845237, 0.8684523)
+texture = ExtResource("1_pit2x")
+
+[node name="ControlRoot" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 0
+
+[node name="SelectionReticle" type="Control" parent="ControlRoot"]
+unique_name_in_owner = true
+anchors_preset = 0
+offset_top = -246.0
+offset_right = 337.0
+offset_bottom = 249.0
+
+[node name="Hitbox" type="Control" parent="ControlRoot"]
+unique_name_in_owner = true
+anchors_preset = 0
+offset_top = -246.0
+offset_right = 337.0
+offset_bottom = 250.0
+
+[node name="ThoughtBubbleRight" type="Control" parent="ControlRoot"]
+unique_name_in_owner = true
+anchors_preset = 0
+offset_left = 240.0
+offset_top = -253.0
+offset_right = 240.0
+offset_bottom = -253.0
+
+[node name="ThoughtBubbleLeft" type="Control" parent="ControlRoot"]
+unique_name_in_owner = true
+anchors_preset = 0
+offset_left = 101.0
+offset_top = -253.0
+offset_right = 101.0
+offset_bottom = -253.0

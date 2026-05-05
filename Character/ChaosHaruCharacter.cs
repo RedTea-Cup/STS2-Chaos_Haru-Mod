@@ -11,6 +11,9 @@ namespace Chaos_Haru.Character;
 [RegisterCharacter]
 public sealed class ChaosHaruCharacter : ModCharacterTemplate<ChaosHaruCardPool, ChaosHaruRelicPool, ChaosHaruPotionPool>
 {
+    // 角色是否需要时代和时间线系统
+    public override bool RequiresEpochAndTimeline => false;
+
     public static readonly Color DefaultColor = new("7A7AFF");
 
     public override Color NameColor => new(0.5f, 0.5f, 1f, 1f);
